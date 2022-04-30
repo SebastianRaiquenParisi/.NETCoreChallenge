@@ -60,3 +60,15 @@ C:\Users\Seba\source\repos\pruebas\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\
 C:\Users\Seba\source\repos\pruebas\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.pdb
 C:\Users\Seba\source\repos\pruebas\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.genruntimeconfig.cache
 C:\Users\Seba\source\repos\pruebas\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\ref\vehiculosCRUD.dll
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.csproj.AssemblyReference.cache
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.AssemblyInfoInputs.cache
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.AssemblyInfo.cs
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.csproj.CoreCompileInputs.cache
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.RazorAssemblyInfo.cache
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.RazorAssemblyInfo.cs
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.dll
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\refint\vehiculosCRUD.dll
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.pdb

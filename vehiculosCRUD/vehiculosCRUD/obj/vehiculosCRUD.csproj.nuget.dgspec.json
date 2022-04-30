@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seba\\source\\repos\\pruebas\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj": {}
+    "C:\\Users\\Seba\\source\\repos\\ASP.NET.Challenge\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seba\\source\\repos\\pruebas\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj": {
+    "C:\\Users\\Seba\\source\\repos\\ASP.NET.Challenge\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seba\\source\\repos\\pruebas\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Seba\\source\\repos\\ASP.NET.Challenge\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj",
         "projectName": "vehiculosCRUD",
-        "projectPath": "C:\\Users\\Seba\\source\\repos\\pruebas\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj",
+        "projectPath": "C:\\Users\\Seba\\source\\repos\\ASP.NET.Challenge\\vehiculosCRUD\\vehiculosCRUD\\vehiculosCRUD.csproj",
         "packagesPath": "C:\\Users\\Seba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seba\\source\\repos\\pruebas\\vehiculosCRUD\\vehiculosCRUD\\obj\\",
+        "outputPath": "C:\\Users\\Seba\\source\\repos\\ASP.NET.Challenge\\vehiculosCRUD\\vehiculosCRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Seba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,14 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [
