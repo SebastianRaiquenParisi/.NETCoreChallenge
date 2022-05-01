@@ -71,13 +71,13 @@ namespace vehiculosCRUD.Models
                     .IsUnicode(false)
                     .HasColumnName("modelo");
 
-                entity.HasOne(d => d.IdMarcaNavigation)
+                entity.HasOne(d => d.Marca)
                     .WithMany(p => p.Vehiculos)
                     .HasForeignKey(d => d.IdMarca)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Vehiculos_Marcas");
 
-                entity.HasOne(d => d.IdPropietarioNavigation)
+                entity.HasOne(d => d.Propietario)
                     .WithMany(p => p.Vehiculos)
                     .HasForeignKey(d => d.IdPropietario)
                     .OnDelete(DeleteBehavior.ClientSetNull)

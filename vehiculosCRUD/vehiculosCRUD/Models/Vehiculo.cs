@@ -11,7 +11,7 @@ namespace vehiculosCRUD.Models
         public string Modelo { get; set; } = null!;
         public int? CantPuertas { get; set; }
 
-        public virtual Marca IdMarcaNavigation { get; set; } = null!;
-        public virtual Propietario IdPropietarioNavigation { get; set; } = null!;
+        public virtual Marca Marca { get; set; } = null!;
+        public virtual Propietario Propietario { get; set; } = null!;
     }
 }

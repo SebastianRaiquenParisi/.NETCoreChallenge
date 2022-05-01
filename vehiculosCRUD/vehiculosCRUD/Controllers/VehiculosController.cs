@@ -22,7 +22,7 @@ namespace vehiculosCRUD.Controllers
         // GET: Vehiculoes
         public async Task<IActionResult> Index()
         {
-            var db_vehiculosContext = _context.Vehiculos.Include(v => v.IdMarcaNavigation).Include(v => v.IdPropietarioNavigation);
+            var db_vehiculosContext = _context.Vehiculos.Include(v => v.Marca).Include(v => v.Propietario);
             return View(await db_vehiculosContext.ToListAsync());
         }
 
@@ -35,8 +35,8 @@ namespace vehiculosCRUD.Controllers
             }
 
             var vehiculo = await _context.Vehiculos
-                .Include(v => v.IdMarcaNavigation)
-                .Include(v => v.IdPropietarioNavigation)
+                .Include(v => v.Marca)
+                .Include(v => v.Propietario)
                 .FirstOrDefaultAsync(m => m.Patente == id);
             if (vehiculo == null)
             {
@@ -136,8 +136,8 @@ namespace vehiculosCRUD.Controllers
             }
 
             var vehiculo = await _context.Vehiculos
-                .Include(v => v.IdMarcaNavigation)
-                .Include(v => v.IdPropietarioNavigation)
+                .Include(v => v.Marca)
+                .Include(v => v.Propietario)
                 .FirstOrDefaultAsync(m => m.Patente == id);
             if (vehiculo == null)
             {

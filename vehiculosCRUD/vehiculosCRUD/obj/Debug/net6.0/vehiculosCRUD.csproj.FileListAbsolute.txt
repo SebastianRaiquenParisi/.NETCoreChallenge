@@ -329,3 +329,4 @@ C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Deb
 C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.csproj.CopyComplete
 C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\vehiculosCRUD.genruntimeconfig.cache
 C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\obj\Debug\net6.0\ref\vehiculosCRUD.dll
+C:\Users\Seba\source\repos\ASP.NET.Challenge\vehiculosCRUD\vehiculosCRUD\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

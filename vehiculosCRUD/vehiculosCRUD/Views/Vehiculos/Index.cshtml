@@ -19,10 +19,10 @@
                 @Html.DisplayNameFor(model => model.CantPuertas)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdMarcaNavigation)
+                @Html.DisplayNameFor(model => model.Marca)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdPropietarioNavigation)
+                @Html.DisplayNameFor(model => model.Propietario)
             </th>
             <th></th>
         </tr>
@@ -37,10 +37,10 @@
                 @Html.DisplayFor(modelItem => item.CantPuertas)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Id)
+                @Html.DisplayFor(modelItem => item.Marca.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdPropietarioNavigation.Id)
+                @Html.DisplayFor(modelItem => item.Propietario.Id)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Patente">Edit</a> |
