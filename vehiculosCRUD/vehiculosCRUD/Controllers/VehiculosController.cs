@@ -10,11 +10,11 @@ using vehiculosCRUD.Models;
 
 namespace vehiculosCRUD.Controllers
 {
-    public class VehiculoesController : Controller
+    public class VehiculosController : Controller
     {
         private readonly db_vehiculosContext _context;
 
-        public VehiculoesController(db_vehiculosContext context)
+        public VehiculosController(db_vehiculosContext context)
         {
             _context = context;
         }
