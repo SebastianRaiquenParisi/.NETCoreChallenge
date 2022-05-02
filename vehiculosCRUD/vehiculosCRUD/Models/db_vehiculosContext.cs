@@ -56,7 +56,7 @@ namespace vehiculosCRUD.Models
                 entity.HasKey(e => e.Patente);
 
                 entity.Property(e => e.Patente)
-                    .HasMaxLength(7)
+                    .HasMaxLength(8)
                     .IsUnicode(false)
                     .HasColumnName("patente");
 

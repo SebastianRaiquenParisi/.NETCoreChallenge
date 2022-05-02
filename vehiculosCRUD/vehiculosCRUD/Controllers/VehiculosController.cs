@@ -19,14 +19,14 @@ namespace vehiculosCRUD.Controllers
             _context = context;
         }
 
-        // GET: Vehiculos
+        // GET: Vehiculoes
         public async Task<IActionResult> Index()
         {
             var db_vehiculosContext = _context.Vehiculos.Include(v => v.Marca).Include(v => v.Propietario);
             return View(await db_vehiculosContext.ToListAsync());
         }
 
-        // GET: Vehiculos/Details/5
+        // GET: Vehiculoes/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -127,7 +127,7 @@ namespace vehiculosCRUD.Controllers
             return View(vehiculo);
         }
 
-        // GET: Vehiculos/Delete/5
+        // GET: Vehiculoes/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -147,7 +147,7 @@ namespace vehiculosCRUD.Controllers
             return View(vehiculo);
         }
 
-        // POST: Vehiculos/Delete/5
+        // POST: Vehiculoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
