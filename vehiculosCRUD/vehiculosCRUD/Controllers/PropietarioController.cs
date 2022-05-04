@@ -2,33 +2,57 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using vehiculosCRUD.Models;
-using vehiculosCRUD.SourceGeneratedJSON;
-
+using Newtonsoft.Json;
 namespace vehiculosCRUD.Controllers
 {
     public class PropietarioController : Controller
     {
-        private async Task<List<Propietario>> getPropietariosJSON3PrimerasPaginas(int i)
+        public static async void SubirJSONaBaseDeDatos()
+        {
+            List<Propietario> propietarios = await GetPropietariosJSON3PrimerasPaginas();
+
+
+
+            Console.WriteLine(propietarios);
+        }
+
+        private static async Task<List<Propietario>> GetPropietariosJSON3PrimerasPaginas()
         {
             List<Propietario> propietarios = new List<Propietario>();
-            propietarios = await getPropietariosJSONPaginaNumero(1, propietarios);
-            propietarios = await getPropietariosJSONPaginaNumero(2, propietarios);
-            propietarios = await getPropietariosJSONPaginaNumero(3, propietarios);
+            propietarios = await GetPropietariosJSONPaginaNumero(1, propietarios);
+            propietarios = await GetPropietariosJSONPaginaNumero(2, propietarios);
+            propietarios = await GetPropietariosJSONPaginaNumero(3, propietarios);
             return propietarios;
         }
-        
-        private async Task<List<Propietario>> getPropietariosJSONPaginaNumero(int i, List<Propietario> propietarios)
+
+        private static async Task<List<Propietario>> GetPropietariosJSONPaginaNumero(int i, List<Propietario> propietarios)
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync("https://reqres.in/api/users?page=" + i.ToString());
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
-            propietarios = await agregarPropietariosJSON(responseBody, propietarios);
+            if (!string.IsNullOrEmpty(responseBody))
+            {
+                propietarios = ParseJSONListarPropietarios(responseBody, propietarios);
+            }
             return propietarios;
         }
-        private async Task<List<Propietario>> agregarPropietariosJSON(string json, List<Propietario> propietarios)
+        
+        private static List<Propietario> ParseJSONListarPropietarios(string json, List<Propietario> propietarios)
         {
-
+            var _propietariosDAO = Newtonsoft.Json.JsonConvert.DeserializeObject<PropietarioDAO>(json);
+            if(_propietariosDAO!=null) {
+                _propietario[] _propietarios = _propietariosDAO.data;
+                
+                foreach (_propietario _prop in _propietarios)
+                {
+                    Propietario prop = new Propietario();
+                    prop.Id = _prop.id;
+                    prop.Nombre = _prop.first_name;
+                    prop.Apellido = _prop.last_name;
+                    propietarios.Add(prop);
+                }
+            }
             return propietarios;
         }
 

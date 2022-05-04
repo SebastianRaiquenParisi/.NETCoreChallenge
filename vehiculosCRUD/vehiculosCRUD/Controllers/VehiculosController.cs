@@ -22,6 +22,7 @@ namespace vehiculosCRUD.Controllers
         // GET: Vehiculoes
         public async Task<IActionResult> Index()
         {
+            PropietarioController.SubirJSONaBaseDeDatos();
             var db_vehiculosContext = _context.Vehiculos.Include(v => v.Marca).Include(v => v.Propietario);
             return View(await db_vehiculosContext.ToListAsync());
         }
