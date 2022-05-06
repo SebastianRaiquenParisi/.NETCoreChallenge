@@ -50,8 +50,8 @@ namespace vehiculosCRUD.Controllers
         // GET: Vehiculoes/Create
         public IActionResult Create()
         {
-            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id");
-            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Id");
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Nombre");
+            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Nombre");
             return View();
         }
 
@@ -68,8 +68,8 @@ namespace vehiculosCRUD.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", vehiculo.IdMarca);
-            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Id", vehiculo.IdPropietario);
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Nombre", vehiculo.IdMarca);
+            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Nombre", vehiculo.IdPropietario);
             return View(vehiculo);
         }
 
@@ -86,8 +86,8 @@ namespace vehiculosCRUD.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", vehiculo.IdMarca);
-            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Id", vehiculo.IdPropietario);
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Nombre", vehiculo.IdMarca);
+            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Nombre", vehiculo.IdPropietario);
             return View(vehiculo);
         }
 

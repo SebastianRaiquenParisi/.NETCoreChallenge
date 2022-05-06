@@ -14,6 +14,8 @@ namespace vehiculosCRUD.Models
         public string Nombre { get; set; } = null!;
         public string Apellido { get; set; } = null!;
 
+
         public virtual ICollection<Vehiculo> Vehiculos { get; set; }
+
     }
 }
