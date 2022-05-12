@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations;
 namespace vehiculosCRUD.Models
 {
     public partial class Propietario
@@ -9,9 +9,11 @@ namespace vehiculosCRUD.Models
         {
             Vehiculos = new HashSet<Vehiculo>();
         }
-
+        [Required]
         public int Id { get; set; }
+        [Required]
         public string Nombre { get; set; } = null!;
+        [Required]
         public string Apellido { get; set; } = null!;
 
 

@@ -51,7 +51,7 @@ namespace vehiculosCRUD.Controllers
         public IActionResult Create()
         {
             ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Nombre");
-            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Nombre");
+            ViewData["IdPropietario"] = CrearSelectListPropietarios(_context.Propietarios);
             return View();
         }
 
@@ -69,8 +69,62 @@ namespace vehiculosCRUD.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Nombre", vehiculo.IdMarca);
-            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Nombre", vehiculo.IdPropietario);
+            ViewData["IdPropietario"] = CrearSelectListPropietarios(_context.Propietarios);
             return View(vehiculo);
+        }
+
+        public IEnumerable<SelectListItem> CrearSelectListPropietarios(IEnumerable<Propietario> list) {
+            List<SelectListItem> selectList = new List<SelectListItem>();
+
+            foreach (Propietario prop in list) {
+                SelectListItem selectItem = new SelectListItem
+                {
+                    Text = prop.Nombre + " " + prop.Apellido,
+                    Value = prop.Id.ToString(),
+                    Selected = false
+                };
+                selectList.Add(selectItem);
+            }
+            
+
+            return selectList;
+
+        }
+
+        public IEnumerable<SelectListItem> CrearSelectListPropietarios(IEnumerable<Propietario> list, int id)
+        {
+            List<SelectListItem> selectList = new List<SelectListItem>();
+
+            foreach (Propietario prop in list)
+            {
+                SelectListItem selectItem;
+                if (prop.Id == id)
+                {
+                    selectItem = new SelectListItem
+                    {
+                        Text = prop.Nombre + " " + prop.Apellido,
+                        Value = prop.Id.ToString(),
+                        Selected = true
+
+                    };
+
+                }
+                else {
+                    selectItem = new SelectListItem
+                    {
+                        Text = prop.Nombre + " " + prop.Apellido,
+                        Value = prop.Id.ToString(),
+                        Selected = false
+
+                    };
+                }
+                selectList.Add(selectItem);
+
+            }
+
+
+            return selectList;
+
         }
 
         // GET: Vehiculos/Edit/5
@@ -87,7 +141,7 @@ namespace vehiculosCRUD.Controllers
                 return NotFound();
             }
             ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Nombre", vehiculo.IdMarca);
-            ViewData["IdPropietario"] = new SelectList(_context.Propietarios, "Id", "Nombre", vehiculo.IdPropietario);
+            ViewData["IdPropietario"] = CrearSelectListPropietarios(_context.Propietarios, vehiculo.IdPropietario);
             return View(vehiculo);
         }
 
