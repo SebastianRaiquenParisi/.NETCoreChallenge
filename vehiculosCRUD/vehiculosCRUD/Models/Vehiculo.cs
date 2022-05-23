@@ -15,6 +15,7 @@ namespace vehiculosCRUD.Models
         public int IdMarca { get; set; }
         [Required]
         public string Modelo { get; set; } = null!;
+        [Range(2, 4)]
         public int? CantPuertas { get; set; }
 
         public virtual Marca? Marca { get; set; } = null!;

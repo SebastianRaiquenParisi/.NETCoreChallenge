@@ -10,8 +10,11 @@ namespace vehiculosCRUD.Controllers
 {
     public class PropietarioController : Controller
     {
+        private static SqlConnection getConnection() {
 
-        
+            var conn = new SqlConnection("Server=DESKTOP-GE740DJ; Database=db_vehiculos; Trusted_Connection=True");
+            return conn;
+        }        
         public static async void SubirJSONaBaseDeDatos()
         {
             List<Propietario> propietarios = await GetPropietariosJSON3PrimerasPaginas();
@@ -24,7 +27,7 @@ namespace vehiculosCRUD.Controllers
         }
 
         private static void InsertPropietarioIntoPropietarios(Propietario propietario) {
-            var conn = new SqlConnection("Server=DESKTOP-GE740DJ; Database=db_vehiculos; Trusted_Connection=True");
+            var conn = getConnection();
             SqlCommand insert_into_propietarios = new SqlCommand("INSERT into Propietarios (nombre,apellido) VALUES (@nombre,@apellido)");
             conn.Open();
             insert_into_propietarios.Connection = conn;
@@ -37,7 +40,7 @@ namespace vehiculosCRUD.Controllers
 
         private static bool CheckIfPropietarioExists(Propietario propietario) {
             bool propietarioExists = false;
-            var conn = new SqlConnection("Server=DESKTOP-GE740DJ; Database=db_vehiculos; Trusted_Connection=True");
+            var conn = getConnection();
             conn.Open();
             SqlCommand check_propietario = new SqlCommand("SELECT COUNT(*) FROM [Propietarios] WHERE ([nombre] = @nombre) AND ([apellido] = @apellido)");
             check_propietario.Connection = conn;
