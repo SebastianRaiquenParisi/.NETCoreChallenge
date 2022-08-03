@@ -1,3 +1,3 @@
-#.NETCore Challenge
+# .NETCore Challenge
 
 CRUD .NETCore application with 
