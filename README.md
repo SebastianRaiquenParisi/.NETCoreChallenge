@@ -4,11 +4,19 @@ CRUD .NETCore application with EntityFramework and also raw queries. Car ownersh
 
 Project that landed me my first IT job.
 
-### Use a [Visual Studio version](https://visualstudio.microsoft.com/vs/) that supports 6.0 version of .NETCore
+### Use a [Visual Studio version](https://visualstudio.microsoft.com/vs/) that supports 6.0 version of .NETCore and [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
-### Use [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
-###### Search for your
+###### Search for your server name in SQL Server Management Studio
+
+
+###### Migrate DB using Package Manager Console
+
+run this command on console:
+
+```
+update-databe -verbose
+```
 
 ###### Install Project
 
@@ -20,8 +28,5 @@ Open the project/solution in Visual Studio, then open the console using the Tool
 
 run this command in the console
 
-```
-//
-```
 
 
