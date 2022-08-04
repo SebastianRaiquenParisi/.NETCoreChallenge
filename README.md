@@ -4,7 +4,7 @@ CRUD .NETCore application with EntityFramework and also raw queries. Car ownersh
 
 Project that landed me my first IT job.
 
-### Use a [Visual Studio version](https://visualstudio.microsoft.com/vs/) that supports 6.0 version of .NETCore and [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+#### Use a [Visual Studio version](https://visualstudio.microsoft.com/vs/) that supports 6.0 version of .NETCore and [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
 ### Install Project
 
